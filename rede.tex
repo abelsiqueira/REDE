@@ -1,0 +1,182 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{amssymb, amsmath, amsfonts}
+\bibliographystyle{plain}
+\topmargin		0 cm
+\hoffset		0 cm
+\voffset		0 cm
+\evensidemargin		0 cm
+\oddsidemargin		0 cm
+\setlength{\textwidth}{16 cm}
+\setlength{\textheight}{21 cm}
+
+\title{ Rede de Colaboração }
+\author{ Laboratório de Pesquisa Operacional e Otimização }
+\date{ }
+
+\numberwithin{equation}{section}
+\newcommand{\red}{\color{red}}
+\newcommand{\blue}{\color{blue}}
+\newcommand{\green}{\color{green}}
+
+\makeindex
+
+\begin{document}
+\maketitle
+
+\chapter{Manifesto}
+
+\section{ Rede de Colaboração }
+
+\subsection{ Objetivo }
+
+Proporcionar um ambiente de ensino e aprendizado colaborativo, focando 
+nos alunos de pós-graduação da Matemática Aplicada, de forma que o 
+investimento no ensino promova uma contribuição em outra área.
+
+\subsection{ Possíveis Tópicos a Serem Abordados }
+
+\begin{itemize}
+  \item Comandos Básicos de Linux
+  \item C/C++
+  \item Fortran
+  \item MatLab/Octave
+  \item Git
+  \item Makefile
+  \item LaTeX
+  \item Python
+  \item Gdb
+  \item Linguagem de Marcação Markdown
+  \item Linguagem de Marcação RST
+  \item TikZ
+\end{itemize}
+
+\subsection{ Possíveis Contribuições }
+
+\begin{itemize}
+  \item Ensino
+  \item Biblioteca de Algoritmos para o Grupo de Otimização
+  \item Resoluções de Exercícios (focando nas principais disciplinas)
+  \item Elaboração de Apostilas
+\end{itemize}
+
+\subsection{ Horário e Local }
+
+Sexta-feira, sala 323, às 14h, logo após as reuniões do LPOO.
+
+\subsection{ Logística }
+
+\begin{itemize}
+  \item Os tópicos não precisam estar ligados
+  \item As aulas devem, sempre que possível, utilizar alguma forma de contribuição para ensinar o assunto.
+  \item As aulas, a priori, exigem que o aluno traga seu computador.
+  \item A duração das aulas deve variar entre 30 e 60 minutos.
+  \item O professor deve devolver o material da sala para a secretaria de pós.
+\end{itemize}
+
+\subsection{ Funções Administrativas }
+
+\begin{itemize}
+  \item {\bf Administrador {\it (Mestre da Masmorra)}:} Abel Soares Siqueira
+  \item {\bf Mantenedor (site e cronograma) {\it (Guardião do Portal)}:} 
+    Raniere Gaia Costa da Silva
+  \item {\bf Marketing {\it (Clérigo da Ordem)}:} Bruno Henrique Cervelin
+  \item {\bf Recrutador (para professores e alunos) {\it (Monge Wololoo)}:} 
+    Daiane Gonçalves Ferreira
+  \item {\bf Assessor Administrativo {\it (Loremaster)}:} Deise Gonçalves Ferreira
+\end{itemize}
+
+\subsection{ Descrição das Funções }
+
+\begin{itemize}
+  \item Administrador
+  \begin{itemize}
+    \item Organiza as aulas (Em conjunto com o professor específico);
+    \item Mantém o relacionamento da equipe;
+    \item Atribui as tarefas.
+  \end{itemize}
+  \item Mantenedor
+  \begin{itemize}
+    \item Atualiza o site;
+    \item Atualiza o cronograma.
+  \end{itemize}
+  \item Marketing
+  \begin{itemize}
+    \item Cria material de divulgação para a Rede;
+    \item Divulga o grupo pessoalmente para grupos de pessoas;
+  \end{itemize}
+  \item Recrutador
+  \begin{itemize}
+    \item Matricula os alunos;
+    \item Mantém o banco de dados dos integrantes;
+    \item Organiza os requisitos de aulas.
+  \end{itemize}
+  \item Assistente Administrativo
+  \begin{itemize}
+    \item Produz as atas das reuniões;
+    \item Mantém o banco de documentos.
+  \end{itemize}
+\end{itemize}
+
+\chapter{Estrutura das Aulas}
+
+\chapter{Sistema de Realizações e Níveis}
+
+\section{ Realizações }
+
+As realizações são tarefas ou exercícios disponíveis para
+o integrante que premiam o integrante com uma quantidade de pontos
+de experiência.
+Cada realização só pode ser concluída uma vez, e uma vez
+que o integrante a concluiu, ele não a perde.
+
+Cada aula deve ter ao menos uma realização, e preferencialmente
+uma envolvendo a conclusão de um curso ou módulo. 
+
+As realizações devem ser classificadas em fácil, média ou
+difícil, e cada nível de dificuldade correspondente a uma
+quantidade diferente de pontos de recompensa.
+
+\section{ Níveis }
+
+Ao acumular uma quantidade suficiente de pontos de experiência, o 
+integrante passa para um nível diferente.
+
+Os níveis podem ser apenas por questões estéticas, ou podemos
+exigir um certo nível para participação de alguns eventos.
+
+\section{ Exemplo }
+
+Uma possibilidade de valores é
+\begin{center}
+  \begin{tabular}{|c|c|} \hline
+   {\bf Dificuldade } & {\bf Pontuação} \\ \hline
+   Fácil & 5  \\ \hline
+   Médio & 15 \\ \hline
+   Difícil & 30 \\ \hline
+  \end{tabular}
+  \vspace{1cm}
+
+  \begin{tabular}{|c|r|l|} \hline
+  {\bf Nível} & {\bf EXP} & {\bf Título} \\ \hline
+  1 &    0 & Recruta \\ \hline
+  2 &  100 & Aprendiz \\ \hline
+  3 &  220 & Iniciante \\ \hline
+  4 &  360 & Alquimista \\ \hline
+  5 &  520 & Bruxo \\ \hline
+  6 &  710 & Mago \\ \hline
+  7 &  930 & Necromante \\ \hline
+  8 & 1190 & Invocador \\ \hline
+  9 & 1500 & Arquimago \\ \hline
+  \end{tabular}
+\end{center}
+
+\end{document}
