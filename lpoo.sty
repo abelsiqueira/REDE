@@ -1,0 +1,241 @@
+\usepackage{tikz}
+\newcommand{\easy}{\hfill
+\begin{tikzpicture}[scale=0.25]
+  \draw[fill] (0,0) circle (1);
+  \draw[fill=green] (90:1) -- (210:1) -- (330:1) -- (90:1);
+\end{tikzpicture}}
+\newcommand{\medium}{\hfill
+\begin{tikzpicture}[scale=0.25]
+  \draw[fill] (0,0) circle (1);
+  \draw[fill=yellow] (45:1) -- (135:1) -- (225:1) -- (315:1) -- (45:1);
+\end{tikzpicture}}
+\newcommand{\hard}{\hfill
+\begin{tikzpicture}[scale=0.25]
+  \draw[fill] (0,0) circle (1);
+  \draw[fill=orange] (0+18:1) -- (72+18:1) -- (72*2+18:1) -- (72*3+18:1) -- 
+    (72*4+18:1) -- (72*5+18:1);
+\end{tikzpicture}}
+\newcommand{\veryhard}{\hfill
+\begin{tikzpicture}[scale=0.25]
+  \draw[fill] (0,0) circle (1);
+  \draw[fill=red] (30:1) -- (90:1) -- (150:1) -- (210:1) -- (270:1) --
+    (330:1) -- (30:1);
+\end{tikzpicture}}
+
+\definecolor{medalborder}{rgb}{0.8,0.8,0.8}
+\definecolor{medalcrowncolor}{rgb}{0.8,0.8,0.8}
+\definecolor{medalwingscolor}{rgb}{0.8,0.8,0.8}
+\definecolor{medalcolor}{rgb}{0.0,0.3,0.3}
+\definecolor{gold}{rgb}{0.7,0.7,0.0}
+
+\newcommand{\medaloutline}{
+  \draw[blue,fill=black] (0,0) circle (1.5);
+  \draw[blue,fill=medalcolor] (0,0) circle (1.4);
+}
+
+\newcommand{\medalwings}{
+  \draw[thick,fill=medalwingscolor] (30:1.4) .. controls (1.5,0.75) .. (1.9,1) 
+    .. controls (1.2,0) and (2.3,-0.5) .. (1.7,-1.5) 
+    .. controls (1.5,-0.8) and (1.5,-1.0) .. (-30:1.4) arc (-30:30:1.4);
+  \draw[thick,fill=medalwingscolor] (150:1.4) .. controls (-1.5,0.75) .. (-1.9,1) 
+    .. controls (-1.2,0) and (-2.3,-0.5) .. (-1.7,-1.5) 
+    .. controls (-1.5,-0.8) and (-1.5,-1.0) .. (210:1.4) arc (210:150:1.4);
+}
+
+\newcommand{\medalcrown}{
+  \draw[thick,fill=medalcrowncolor] (0,2.6)+(210:1.35) arc (210:330:1.35)
+    arc (310:230:1.8);
+}
+
+\newcommand{\medalborder}{
+  \draw[thick,fill=medalborder,even odd rule] (0,0) circle (1.6)
+    (0,0) circle (1.51)
+    (0,0) circle (1.49)
+    (0,0) circle (1.4);
+}
+
+\newcommand{\medalcross}{
+  \draw[thick,fill=medalborder] (180-38:1.3) -- (180-40:2.2) --
+    (180-50:2.2) -- (180-52:1.3) arc (180-52:180-38:1.3);
+  \draw[thick,fill=medalborder] (180+38:1.3) -- (180+42:1.9) --
+    (180+45:2.5) -- (180+48:1.9) -- (180+52:1.3) arc (180+52:180+38:1.3);
+  \draw[thick,fill=medalborder] (38:1.3) -- (40:2.2) --
+    (50:2.2) -- (52:1.3) arc (52:38:1.3);
+  \draw[thick,fill=medalborder] (-38:1.3) -- (-42:1.9) --
+    (-45:2.5) -- (-48:1.9) -- (-52:1.3) arc (-52:-38:1.3);
+}
+
+\newcommand{\simboloalquimista}[1]{
+  \draw[fill,yellow] (0,0)+#1 circle (0.15);
+  \foreach \x in {0, 45, 90, ..., 360} {
+    \draw[fill,gold] (\x:0.25)+#1 circle (0.12);
+  }
+}
+
+\newcommand{\simbolobruxo}[1]{
+  \draw[fill=white] (0,0)+#1 circle (0.4);
+  \draw[thin,fill=red] (-0.38,0)+#1 arc (150:30:0.44) arc (330:210:0.44);
+  \draw[fill,black] (0,0)+#1 circle (0.10);
+}
+
+\newcommand{\simbolomago}[1]{
+  \draw[fill=gray] (0,0)+#1 circle (0.4);
+  \draw[shift={#1},fill=white,even odd rule] (90:0.35) -- (90+2*72:0.35) -- (90+4*72:0.35) -- 
+    (90+1*72:0.35) -- (90+3*72:0.35) -- (90:0.35);
+}
+
+\newcommand{\simboloinvocador}[1]{
+  \draw[shift={#1},fill=gray] (0,0) circle (0.4);
+  \draw[shift={#1},fill=white] (-0.24,-0.24) rectangle (0.24,0.24);
+  \foreach \x in {0,90,180,270} {
+    \draw[shift={#1},fill,black] (\x:0.3) circle (0.03);
+  }
+}
+
+\newcommand{\simboloarquimago}[1]{
+  \draw[shift={#1},fill] (0,0) circle (0.4);
+  \foreach \x in {0,120,240} {
+    \shade[ball color=red,shift={#1}] (\x:0.2) circle (0.14);
+    \shade[ball color=green,shift={#1},rotate={60}] (\x:0.25) circle (0.08);
+  }
+  \shade[ball color=blue,shift={#1}] (0,0) circle (0.16);
+  %\draw[shift={#1},rotate={360/28}] (0:0.25) -- (360*3/7:0.25) -- (360*6/7:0.25) --
+    %(360*9/7:0.25) -- (360*12/7:0.25) -- (360*15/7:0.25) --
+    %(360*18/7:0.25) -- (0:0.25);
+}
+
+\newcommand{\MedalhaAlquimista}[1]{
+  \begin{tikzpicture}[scale=0.7]
+    \medaloutline
+    \ifnum#1 = 1
+      \simboloalquimista{(0,0)}
+    \else
+      \ifnum#1 = 2
+        \simboloalquimista{(0,-0.8)}
+        \simboloalquimista{(0,0.8)}
+      \else
+        \ifnum#1 = 3
+          \simboloalquimista{(90:0.8)}
+          \simboloalquimista{(210:0.8)}
+          \simboloalquimista{(330:0.8)}
+        \else
+          \simboloalquimista{(0:0.8)}
+          \simboloalquimista{(90:0.8)}
+          \simboloalquimista{(180:0.8)}
+          \simboloalquimista{(270:0.8)}
+        \fi
+      \fi 
+    \fi
+  \end{tikzpicture}
+}
+
+\newcommand{\MedalhaBruxo}[1]{
+  \begin{tikzpicture}[scale=0.7]
+    \medaloutline
+    \medalwings
+    \ifnum#1 = 1
+      \simbolobruxo{(0,0)}
+    \else
+      \ifnum#1 = 2
+        \simbolobruxo{(0,-0.8)}
+        \simbolobruxo{(0,0.8)}
+      \else
+        \ifnum#1 = 3
+          \simbolobruxo{(90:0.8)}
+          \simbolobruxo{(210:0.8)}
+          \simbolobruxo{(330:0.8)}
+        \else
+          \simbolobruxo{(0:0.8)}
+          \simbolobruxo{(90:0.8)}
+          \simbolobruxo{(180:0.8)}
+          \simbolobruxo{(270:0.8)}
+        \fi
+      \fi 
+    \fi
+  \end{tikzpicture}
+}
+
+\newcommand{\MedalhaMago}[1]{
+  \begin{tikzpicture}[scale=0.7]
+    \medaloutline
+    \medalwings
+    \medalcrown
+    \ifnum#1 = 1
+      \simbolomago{(0,0)}
+    \else
+      \ifnum#1 = 2
+        \simbolomago{(0,-0.8)}
+        \simbolomago{(0,0.8)}
+      \else
+        \ifnum#1 = 3
+          \simbolomago{(90:0.8)}
+          \simbolomago{(210:0.8)}
+          \simbolomago{(330:0.8)}
+        \else
+          \simbolomago{(0:0.8)}
+          \simbolomago{(90:0.8)}
+          \simbolomago{(180:0.8)}
+          \simbolomago{(270:0.8)}
+        \fi
+      \fi 
+    \fi
+  \end{tikzpicture}
+}
+
+\newcommand{\MedalhaInvocador}[1]{
+  \begin{tikzpicture}[scale=0.7]
+    \medaloutline
+    \medalborder
+    \medalwings
+    \medalcrown
+    \ifnum#1 = 1
+      \simboloinvocador{(0,0)}
+    \else
+      \ifnum#1 = 2
+        \simboloinvocador{(0,-0.8)}
+        \simboloinvocador{(0,0.8)}
+      \else
+        \ifnum#1 = 3
+          \simboloinvocador{(90:0.8)}
+          \simboloinvocador{(210:0.8)}
+          \simboloinvocador{(330:0.8)}
+        \else
+          \simboloinvocador{(0:0.8)}
+          \simboloinvocador{(90:0.8)}
+          \simboloinvocador{(180:0.8)}
+          \simboloinvocador{(270:0.8)}
+        \fi
+      \fi 
+    \fi
+  \end{tikzpicture}
+}
+
+\newcommand{\MedalhaArquimago}[1]{
+  \begin{tikzpicture}[scale=0.7]
+    \medaloutline
+    \medalborder
+    \medalwings
+    \medalcrown
+    \medalcross
+    \ifnum#1 = 1
+      \simboloarquimago{(0,0)}
+    \else
+      \ifnum#1 = 2
+        \simboloarquimago{(0,-0.8)}
+        \simboloarquimago{(0,0.8)}
+      \else
+        \ifnum#1 = 3
+          \simboloarquimago{(90:0.8)}
+          \simboloarquimago{(210:0.8)}
+          \simboloarquimago{(330:0.8)}
+        \else
+          \simboloarquimago{(0:0.8)}
+          \simboloarquimago{(90:0.8)}
+          \simboloarquimago{(180:0.8)}
+          \simboloarquimago{(270:0.8)}
+        \fi
+      \fi 
+    \fi
+  \end{tikzpicture}
+}
+

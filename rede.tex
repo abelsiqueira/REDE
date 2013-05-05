@@ -17,6 +17,7 @@
 \oddsidemargin		0 cm
 \setlength{\textwidth}{16 cm}
 \setlength{\textheight}{21 cm}
+\usepackage{lpoo}
 
 \title{ Rede de Colaboração }
 \author{ Laboratório de Pesquisa Operacional e Otimização }
@@ -165,9 +166,18 @@ que o integrante a concluiu, ele não a perde.
 Cada aula deve ter ao menos uma realização, e preferencialmente
 uma envolvendo a conclusão de um curso ou módulo. 
 
-As realizações devem ser classificadas em fácil, média ou
-difícil, e cada nível de dificuldade correspondente a uma
-quantidade diferente de pontos de recompensa.
+As realizações devem ser classificadas em fácil, média,
+difícil e muito difícil, e cada nível de dificuldade correspondente a uma
+quantidade diferente de pontos de recompensa. Além disso, cada realização
+tem um símbolo para identificar a dificuldade.
+\begin{center}
+  \begin{tabular}{lrc} 
+   Fácil         &  5  & \easy \\ 
+   Médio         & 15  & \medium \\ 
+   Difícil       & 30  & \hard \\ 
+   Muito Difícil & 60  & \veryhard \\ 
+  \end{tabular}
+\end{center}
 
 \section{ Níveis }
 
@@ -177,29 +187,29 @@ integrante passa para um nível diferente.
 Os níveis podem ser apenas por questões estéticas, ou podemos
 exigir um certo nível para participação de alguns eventos.
 
-\section{ Exemplo }
-
-Uma possibilidade de valores é
+A quantidade de experiência para alcançar os níveis são
 \begin{center}
-  \begin{tabular}{|c|c|} \hline
-   {\bf Dificuldade } & {\bf Pontuação} \\ \hline
-   Fácil & 5  \\ \hline
-   Médio & 15 \\ \hline
-   Difícil & 30 \\ \hline
+    \begin{tabular}{|c|c|c|c|c|} \hline
+    & {\bf Iniciante} & {\bf Médio} & {\bf Avançado} & {\bf Especialista} \\ \hline
+    {\bf Alquimista}  &    0 &  100 &  220 &  360 \\ \hline
+    {\bf Bruxo}       &  510 &  710 &  930 & 1190 \\ \hline
+    {\bf Mago} \\ \hline
+    {\bf Invocador} \\ \hline
+    {\bf Arquimago} \\ \hline
   \end{tabular}
-  \vspace{1cm}
-
-  \begin{tabular}{|c|r|l|} \hline
-  {\bf Nível} & {\bf EXP} & {\bf Título} \\ \hline
-  1 &    0 & Recruta \\ \hline
-  2 &  100 & Aprendiz \\ \hline
-  3 &  220 & Iniciante \\ \hline
-  4 &  360 & Alquimista \\ \hline
-  5 &  520 & Bruxo \\ \hline
-  6 &  710 & Mago \\ \hline
-  7 &  930 & Necromante \\ \hline
-  8 & 1190 & Invocador \\ \hline
-  9 & 1500 & Arquimago \\ \hline
+\end{center}
+\begin{center}
+  \begin{tabular}{cccc} 
+    \MedalhaAlquimista{1} & \MedalhaAlquimista{2} & 
+      \MedalhaAlquimista{3} & \MedalhaAlquimista{4} \\ 
+    \MedalhaBruxo{1} & \MedalhaBruxo{2} & 
+      \MedalhaBruxo{3} & \MedalhaBruxo{4} \\ 
+    \MedalhaMago{1} & \MedalhaMago{2} & 
+      \MedalhaMago{3} & \MedalhaMago{4} \\ 
+    \MedalhaInvocador{1} & \MedalhaInvocador{2} & 
+      \MedalhaInvocador{3} & \MedalhaInvocador{4} \\ 
+    \MedalhaArquimago{1} & \MedalhaArquimago{2} & 
+      \MedalhaArquimago{3} & \MedalhaArquimago{4} \\ 
   \end{tabular}
 \end{center}
 
