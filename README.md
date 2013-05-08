@@ -18,6 +18,7 @@ Proporcionar um ambiente de ensino e aprendizado colaborativo, focando nos aluno
  * Linguagem de Marcação Markdown
  * Linguagem de Marcação RST
  * TikZ
+ * CUTEr
 
 ## Possíveis Contribuições
 
